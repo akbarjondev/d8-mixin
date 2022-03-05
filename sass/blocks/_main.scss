@@ -1,0 +1,72 @@
+.chats{
+  position: relative;
+  background-color:#5a50f0;
+  background-image: url(../images/telegrambg.png);
+  max-width: 500px;
+  height: 800px;
+  margin: 0 auto;
+  display: flex;
+
+  &__flow{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: {
+      left: 12px;
+      right: 12px;
+      bottom: 24px;
+    }
+  }
+
+  .chat{
+    position: relative;
+    background-color: #ffffff;
+    color: #333333;
+    padding: 12px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    max-width: 80%;
+    min-width: 200px;
+    border-radius: 4px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0px;
+      height: 0px;
+      border-top: 12px solid #ffffff;
+      border-right: 12px solid transparent;
+      border-bottom: 12px solid transparent;
+      border-left: 12px solid transparent;
+
+      
+
+    }
+
+    &--right {
+      text-align: right;
+      align-self: flex-end;
+
+      &::before {
+        right: -11px;
+        top: 0;
+      }
+    }
+
+    &--left{
+
+      &::before{
+        left: -11px;
+        top: 0;
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+}
